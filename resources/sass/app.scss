@@ -1,0 +1,64 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  height: 100%;
+}
+
+#app {
+  height: inherit;
+
+  main {
+    height: inherit;
+
+    .container {
+      height: inherit;
+
+      .row {
+        height: inherit;
+      }
+    }
+  }
+}
+
+.card {
+  width: 700px;
+}
+
+#user-card {
+  img {
+    width: 100%;
+  }
+
+  #user-card-body {
+    background-image: url("/assets/body.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .user-card-avatar {
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+  }
+
+  .user-card-logout {
+    font-size: 16px;
+  }
+
+  .user-card-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .user-card-table {
+    margin-bottom: 60px;
+  }
+}
