@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4731429c7f25ab92eaa813447a972209",
+    "content-hash": "2422f2300bc8a340181ab7ff7bb57f1b",
     "packages": [
+        {
+            "name": "caouecs/laravel-lang",
+            "version": "7.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/caouecs/Laravel-lang.git",
+                "reference": "c28e39a14dc3cacaeb8db0a7cc612db37d1e15cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/c28e39a14dc3cacaeb8db0a7cc612db37d1e15cc",
+                "reference": "c28e39a14dc3cacaeb8db0a7cc612db37d1e15cc",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "suggest": {
+                "andrey-helldar/laravel-lang-publisher": "Easy installation and update of translation files for your project",
+                "arcanedev/laravel-lang": "Translations manager and checker for Laravel 5",
+                "overtrue/laravel-lang": "Command to add languages in your project"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "caouecs",
+                    "email": "caouecs@caouecs.net"
+                }
+            ],
+            "description": "Languages for Laravel",
+            "keywords": [
+                "lang",
+                "languages",
+                "laravel",
+                "lpm"
+            ],
+            "time": "2020-08-05T17:42:42+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
@@ -460,6 +508,56 @@
                 "trusted proxy"
             ],
             "time": "2020-06-23T01:36:47+00:00"
+        },
+        {
+            "name": "hyancat/aliyun-direct-mail",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HyanCat/aliyun-direct-mail.git",
+                "reference": "4d382f077b255f2503ec048df1d7de2dc490d47f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HyanCat/aliyun-direct-mail/zipball/4d382f077b255f2503ec048df1d7de2dc490d47f",
+                "reference": "4d382f077b255f2503ec048df1d7de2dc490d47f",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/support": "^5.0|^6.0|^7.0",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "HyanCat\\DirectMail\\AliyunDirectMailServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "HyanCat\\DirectMail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "HyanCat",
+                    "email": "hyancat@live.cn"
+                }
+            ],
+            "description": "阿里云邮件推送 for Laravel.",
+            "time": "2020-03-15T12:21:17+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
