@@ -4,7 +4,7 @@ User Center for users to register to multiple web-sites ([city](city.ibeike.com)
 
 ## Todo list
 
-- [ ] Email check on register
+- [x] Email check on register
+- [x] Feature: reset password
+- [x] Style of home page
 - [ ] Rewrite welcome page
-- [ ] Style of home page
-- [ ] Feature: reset password
