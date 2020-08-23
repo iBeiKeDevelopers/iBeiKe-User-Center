@@ -12,7 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
+});
+
+Route::get('/version', function () {
+    return [
+        'version' => '0.9',
+        'authors' => [
+            [
+                'period'    => '2020',
+                'mail'      => 'jason23347@gmail.com',
+                'name'      => 'ShuaiCheng Zhu',
+            ],
+        ],
+    ];
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
