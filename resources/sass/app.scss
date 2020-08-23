@@ -29,7 +29,13 @@ body {
 }
 
 .card {
-  width: 700px;
+  width: 450px;
+}
+
+.card-header {
+  .card-title {
+    font-size: 20px;
+  }
 }
 
 #user-card {

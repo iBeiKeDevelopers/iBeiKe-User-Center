@@ -6,9 +6,15 @@
         <div class="col-md-8 justify-content-center d-flex">
             <div class="card d-inline-block m-auto">
                 <div class="card-header">
-                    iBeiKe 用户中心
-                    {{ __('Register') }}
-                    <a href="{{ route('login') }}" class="float-right">{{ __('Login') }}</a>
+                    <span class="card-title">iBeiKe 用户中心&nbsp;</span>
+                    {{ __('Register') }} /
+                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+
+                    <span class="float-right">
+                        <a href="#" data-toggle="tooltip" title="目前仅开放学生邮箱的注册！（学号@xs.ustb.edu.cn）">
+                            <a-icon type="info-circle" />
+                        </a>
+                    </span>
                 </div>
 
                 <div class="card-body">
@@ -16,11 +22,13 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+                            <label for="username"
+                                class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
-                                    name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                <input id="username" type="text"
+                                    class="form-control @error('username') is-invalid @enderror" name="username"
+                                    value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                                 @error('username')
                                 <span class="invalid-feedback" role="alert">
@@ -35,8 +43,10 @@
                                 class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                            <input id="email" type="email" placeholder="{{ __('Only Student E-Mail Acceptable (number@xs.ustb.edu.cn)') }}" class="form-control @error('email') is-invalid @enderror"
-                                    name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email"
+                                    placeholder="{{ __('Only Student E-Mail Acceptable') }}"
+                                    class="form-control @error('email') is-invalid @enderror" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -74,7 +84,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-3 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>

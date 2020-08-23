@@ -35,3 +35,7 @@ Vue.use(Icon);
 const app = new Vue({
     el: '#app'
 });
+
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+});

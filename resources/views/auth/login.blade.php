@@ -6,19 +6,21 @@
         <div class="col-md-8 justify-content-center d-flex">
             <div class="card d-inline-block m-auto">
                 <div class="card-header">
-                    iBeiKe 用户中心
-                    {{ __('Login') }}
-                    <a href="{{ route('register') }}" class="float-right">{{ __('Register') }}</a>
+                    <span class="card-title">iBeiKe 用户中心&nbsp;</span>
+                    {{ __('Login') }} /
+                    <a href="{{ route('register') }}">{{ __('Register') }}</a>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <div class="col-md-12">
-                                <input id="email" type="email" placeholder="{{ __('E-Mail Address') }}"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <label for="email"
+                                class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <div class="col-md-6">
+
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+                                    name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
@@ -29,8 +31,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-12">
-                                <input id="password" type="password" placeholder="{{ __('Password') }}"
+                            <label for="password"
+                                class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     required autocomplete="current-password">
 
@@ -43,7 +48,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-12">
+                            <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
