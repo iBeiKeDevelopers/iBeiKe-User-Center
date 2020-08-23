@@ -40,48 +40,46 @@
                     </div>
                     {{-- basic info --}}
                     <div class="col-8 mx-auto">
-                        <div class="user-card-header col-8 offset-1">
+                        <div class="user-card-header col-8 mx-auto text-center">
                             <h4>{{ __('Basic Information') }}</h4>
                         </div>
                         <table class="user-card-table table table-hover">
                             <tr>
                                 <td class="text-center">
-                                    Mail
+                                    <a-icon type="mail"></a-icon>
                                     <br />
-                                    <a-icon type="mail" />
+                                    Mail
                                 </td>
                                 <td>{{ $user->email }}</td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    City
-                                    <br />
                                     <a-icon type="user"></a-icon>
+                                    <br />
+                                    City
                                 </td>
 
                                 <td>{{ $user->username }}</td>
                             </tr>
                             <tr>
                                 <td class="text-center">
-                                    PT
-                                    <br />
                                     <a-icon type="user"></a-icon>
+                                    <br />
+                                    PT
                                 </td>
                                 <td>{{ $user->pt_name }}</td>
                             </tr>
                         </table>
 
                         {{-- Secure Infomation --}}
-                        <div class="user-card-header col-8 offset-1">
+                        <div class="user-card-header col-8 mx-auto text-center">
                             <h4>{{ __('Secure Information') }}</h4>
                         </div>
 
-                        <div class="col-8 offset-2 col-lg-10 offset-lg-3">
-                            <div class="col-12">
-                                <a href="{{ route('password.update') }}" class="button button-link">
-                                    {{ __('Reset Password') }}
-                                </a>
-                            </div>
+                        <div class="col-12 text-center">
+                            <a href="{{ route('password.update') }}" class="button button-link">
+                                {{ __('Reset Password') }}
+                            </a>
                         </div>
                     </div>
 

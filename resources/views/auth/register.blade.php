@@ -6,9 +6,9 @@
         <div class="col-md-8 justify-content-center d-flex">
             <div class="card d-inline-block m-auto">
                 <div class="card-header">
-                    <span class="card-title">iBeiKe 用户中心&nbsp;</span>
-                    {{ __('Register') }} /
-                    <a href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <span class="card-title">iBeiKe 用户{{ __('Register') }}&nbsp;</span>
+
+                    <a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 
                     <span class="float-right">
                         <a href="#" data-toggle="tooltip" title="目前仅开放学生邮箱的注册！（学号@xs.ustb.edu.cn）">
@@ -22,11 +22,13 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="username"
-                                class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text"
+                            <div class="col-12 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <a-icon type="user" />
+                                    </span>
+                                </div>
+                                <input id="username" type="text" placeholder="{{ __('Username') }}"
                                     class="form-control @error('username') is-invalid @enderror" name="username"
                                     value="{{ old('username') }}" required autocomplete="username" autofocus>
 
@@ -39,12 +41,13 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email"
-                                class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email"
-                                    placeholder="{{ __('Only Student E-Mail Acceptable') }}"
+                            <div class="col-12 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <a-icon type="mail" />
+                                    </span>
+                                </div>
+                                <input id="email" type="email" placeholder="{{ __('Only Student E-Mail Acceptable') }}"
                                     class="form-control @error('email') is-invalid @enderror" name="email"
                                     value="{{ old('email') }}" required autocomplete="email">
 
@@ -57,11 +60,13 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password"
-                                class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password"
+                            <div class="col-12 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <a-icon type="lock" />
+                                    </span>
+                                </div>
+                                <input id="password" type="password" placeholder="{{ __('Password') }}"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     required autocomplete="new-password">
 
@@ -74,26 +79,30 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm"
-                                class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control"
-                                    name="password_confirmation" required autocomplete="new-password">
+                            <div class="col-12 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <a-icon type="lock" />
+                                    </span>
+                                </div>
+                                <input id="password-confirm" type="password" placeholder="{{ __('Confirm Password') }}"
+                                    class="form-control" name="password_confirmation" required
+                                    autocomplete="new-password">
                             </div>
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-3 offset-md-4">
+                            <div class="col-md-6 offset-md-2">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
-                    </form>
                 </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection
