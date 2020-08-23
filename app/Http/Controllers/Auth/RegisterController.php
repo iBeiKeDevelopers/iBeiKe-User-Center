@@ -43,7 +43,7 @@ class RegisterController extends Controller
         $this->guard()->login($user);
 
         return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+            ?: redirect($this->redirectPath());
     }
 
     /**
@@ -73,7 +73,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'username' => ['required', 'string', 'unique:cdb_uc_members', 'min:6', 'max:20'],
-            'email' => ['required', 'string', 'email', 'max:30', 'unique:cdb_uc_members'],
+            'email' => [
+                'required', 'string', 'email', 'max:30',
+                'unique:cdb_uc_members', function ($attribute, $value, $fail) {
+                    if (!Str::endsWith($value, 'ustb.edu.cn')) {
+                        return $fail($attribute . ' 必须以 \'xs.ustb.edu.cn\' 结尾。');
+                    }
+                },
+            ],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
