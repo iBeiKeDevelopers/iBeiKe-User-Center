@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <span class="card-title">iBeiKe 用户{{ __('Register') }}&nbsp;</span>
 
-                    <a class="btn btn-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="card-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 
                     <span class="float-right">
                         <a href="#" data-toggle="tooltip" title="目前仅开放学生邮箱的注册！（学号@xs.ustb.edu.cn）">
@@ -41,23 +41,11 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-12 input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">
-                                        <a-icon type="mail" />
-                                    </span>
-                                </div>
-                                <input id="email" type="email" placeholder="{{ __('Only Student E-Mail Acceptable') }}"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
-                            </div>
+                            <email-validator oldemail="{{ old('email') }}" @error('email') message="{{ $message }}"
+                                @enderror placeholder="{{ __("Student E-Mail, Do not forget the 'xs' prefix") }}">
+                            </email-validator>
                         </div>
+
 
                         <div class="form-group row">
                             <div class="col-12 input-group">

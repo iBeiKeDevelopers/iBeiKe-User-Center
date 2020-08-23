@@ -45,7 +45,7 @@
   "You are receiving this email because we received a password reset request for your account.": "您收到此电子邮件是因为我们收到了您帐户的密码重置请求。",
   "Your email address is not verified.": "您的电子邮件尚未验证通过",
   "Whoops!": "哎呦！",
-  "Only Student E-Mail Acceptable": "仅接受学生邮箱注册",
+  "Student E-Mail, Do not forget the 'xs' prefix": "学生邮箱，不要忘记邮箱地址前缀 xs",
   "Basic Information": "基本信息",
   "Secure Information": "安全信息"
 }

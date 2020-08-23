@@ -76,7 +76,7 @@ class RegisterController extends Controller
             'email' => [
                 'required', 'string', 'email', 'max:30',
                 'unique:cdb_uc_members', function ($attribute, $value, $fail) {
-                    if (!Str::endsWith($value, 'ustb.edu.cn')) {
+                    if (!Str::endsWith($value, 'xs.ustb.edu.cn')) {
                         return $fail($attribute . ' 必须以 \'xs.ustb.edu.cn\' 结尾。');
                     }
                 },

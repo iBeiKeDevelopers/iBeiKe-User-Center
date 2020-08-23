@@ -14,6 +14,7 @@ import 'ant-design-vue/dist/antd.css';
 Vue.config.productionTip = false;
 
 Vue.use(Icon);
+Vue.component('email-validator', require("./components/EmailValidator.vue").default);
 
 /**
  * The following block of code may be used to automatically register your

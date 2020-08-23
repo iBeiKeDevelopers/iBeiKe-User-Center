@@ -1,5 +1,5 @@
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Nunito");
+// @import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
 @import "variables";
@@ -10,6 +10,7 @@
 html,
 body {
   height: 100%;
+  background-color: rgba(67, 160, 255, 0.25) !important;
 }
 
 #app {
@@ -29,13 +30,28 @@ body {
 }
 
 .card {
-  width: 450px;
+  min-width: 260px;
+  width: 368px;
+  box-shadow: 0 2px 8px 5px rgba(0, 0, 0, 0.09);
 }
 
 .card-header {
+  border: 0;
+  background-color: white;
+  margin-top: 18px;
+
   .card-title {
-    font-size: 20px;
+    font-size: 26px;
   }
+
+  a {
+    font-size: 1em;
+    padding-left: 14px;
+  }
+}
+
+.card-body {
+  padding-top: 10px;
 }
 
 #user-card {
@@ -66,5 +82,9 @@ body {
 
   .user-card-table {
     margin-bottom: 60px;
+
+    td {
+      vertical-align: middle;
+    }
   }
 }

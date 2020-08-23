@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <span class="card-title">iBeiKe 用户{{ __('Login') }}&nbsp;</span>
 
-                    <a class="btn btn-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="card-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
