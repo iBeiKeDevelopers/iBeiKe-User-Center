@@ -113,6 +113,7 @@ class RegisterController extends Controller
         for ($i = 0; $i < 10; $i++)
             $secret .= pack("C1", random_int(0, 256));
         $status = DB::table('users')->insert([
+            'forums_uid' => $user->uid,
             'username' => $user->username,
             'secret' => $secret,
             'passhash' => md5($secret . $data['password'] . $secret),
@@ -130,8 +131,9 @@ class RegisterController extends Controller
 
         // Database: newcity
         // Table: pre_common_member
-        $status = DB::connection('mysql_newcity')
-            ->table('pre_common_member')->insert([
+        DB::connection('mysql_newcity')->
+            table('pre_common_member')->insert([
+                'uid' => $user->uid,
                 'email' => $user->email,
                 'username' => $user->username,
                 'password' => $user->password,
